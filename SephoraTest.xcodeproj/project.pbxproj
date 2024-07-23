@@ -16,6 +16,14 @@
 		847CBF722C4FCA81009A0B93 /* SephoraTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBF712C4FCA81009A0B93 /* SephoraTestTests.swift */; };
 		847CBF7C2C4FCA81009A0B93 /* SephoraTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBF7B2C4FCA81009A0B93 /* SephoraTestUITests.swift */; };
 		847CBF7E2C4FCA81009A0B93 /* SephoraTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBF7D2C4FCA81009A0B93 /* SephoraTestUITestsLaunchTests.swift */; };
+		847CBF962C4FE0A9009A0B93 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBF952C4FE0A9009A0B93 /* Product.swift */; };
+		847CBF9A2C4FE4ED009A0B93 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBF992C4FE4ED009A0B93 /* ProductListViewController.swift */; };
+		847CBF9D2C4FE646009A0B93 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBF9C2C4FE646009A0B93 /* Endpoint.swift */; };
+		847CBFA02C4FE8FF009A0B93 /* ProductEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBF9F2C4FE8FF009A0B93 /* ProductEndpoint.swift */; };
+		847CBFA22C4FE945009A0B93 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBFA12C4FE945009A0B93 /* APIConstants.swift */; };
+		847CBFA52C4FED55009A0B93 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBFA42C4FED55009A0B93 /* API.swift */; };
+		847CBFA82C4FEEFE009A0B93 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBFA72C4FEEFE009A0B93 /* ProductService.swift */; };
+		847CBFAA2C4FEFBB009A0B93 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CBFA92C4FEFBB009A0B93 /* ProductListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		847CBF772C4FCA81009A0B93 /* SephoraTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SephoraTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		847CBF7B2C4FCA81009A0B93 /* SephoraTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SephoraTestUITests.swift; sourceTree = "<group>"; };
 		847CBF7D2C4FCA81009A0B93 /* SephoraTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SephoraTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		847CBF952C4FE0A9009A0B93 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		847CBF992C4FE4ED009A0B93 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		847CBF9C2C4FE646009A0B93 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		847CBF9F2C4FE8FF009A0B93 /* ProductEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEndpoint.swift; sourceTree = "<group>"; };
+		847CBFA12C4FE945009A0B93 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		847CBFA42C4FED55009A0B93 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		847CBFA72C4FEEFE009A0B93 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		847CBFA92C4FEFBB009A0B93 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,10 @@
 		847CBF592C4FCA7D009A0B93 /* SephoraTest */ = {
 			isa = PBXGroup;
 			children = (
+				847CBF9B2C4FE613009A0B93 /* Network */,
+				847CBF982C4FE497009A0B93 /* ViewModels */,
+				847CBF972C4FE48F009A0B93 /* Views */,
+				847CBF942C4FE083009A0B93 /* Models */,
 				847CBF5A2C4FCA7D009A0B93 /* AppDelegate.swift */,
 				847CBF5C2C4FCA7D009A0B93 /* SceneDelegate.swift */,
 				847CBF5E2C4FCA7D009A0B93 /* ViewController.swift */,
@@ -125,6 +145,66 @@
 				847CBF7D2C4FCA81009A0B93 /* SephoraTestUITestsLaunchTests.swift */,
 			);
 			path = SephoraTestUITests;
+			sourceTree = "<group>";
+		};
+		847CBF942C4FE083009A0B93 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				847CBF952C4FE0A9009A0B93 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		847CBF972C4FE48F009A0B93 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				847CBF992C4FE4ED009A0B93 /* ProductListViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		847CBF982C4FE497009A0B93 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				847CBFA92C4FEFBB009A0B93 /* ProductListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		847CBF9B2C4FE613009A0B93 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				847CBFA62C4FEEE3009A0B93 /* Services */,
+				847CBFA32C4FED42009A0B93 /* API */,
+				847CBF9E2C4FE8E5009A0B93 /* Endpoint */,
+				847CBFA12C4FE945009A0B93 /* APIConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		847CBF9E2C4FE8E5009A0B93 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				847CBF9C2C4FE646009A0B93 /* Endpoint.swift */,
+				847CBF9F2C4FE8FF009A0B93 /* ProductEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		847CBFA32C4FED42009A0B93 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				847CBFA42C4FED55009A0B93 /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		847CBFA62C4FEEE3009A0B93 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				847CBFA72C4FEEFE009A0B93 /* ProductService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +338,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847CBFAA2C4FEFBB009A0B93 /* ProductListViewModel.swift in Sources */,
 				847CBF5F2C4FCA7D009A0B93 /* ViewController.swift in Sources */,
+				847CBF962C4FE0A9009A0B93 /* Product.swift in Sources */,
+				847CBFA02C4FE8FF009A0B93 /* ProductEndpoint.swift in Sources */,
+				847CBF9A2C4FE4ED009A0B93 /* ProductListViewController.swift in Sources */,
+				847CBFA22C4FE945009A0B93 /* APIConstants.swift in Sources */,
 				847CBF5B2C4FCA7D009A0B93 /* AppDelegate.swift in Sources */,
+				847CBF9D2C4FE646009A0B93 /* Endpoint.swift in Sources */,
+				847CBFA52C4FED55009A0B93 /* API.swift in Sources */,
 				847CBF5D2C4FCA7D009A0B93 /* SceneDelegate.swift in Sources */,
+				847CBFA82C4FEEFE009A0B93 /* ProductService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
