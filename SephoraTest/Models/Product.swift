@@ -11,14 +11,14 @@ import Foundation
 
 
 struct Product: Codable {
-    enum Codingkeys: String, CodingKey {
-        case id = "product_id"
-        case name = "product_name"
+    enum CodingKeys: String, CodingKey {
+        case productId = "product_id"
+        case productName = "product_name"
         case description
         case price
-        case image = "images_url"
-        case brand = "c_brand"
-        case isSpecial = "is_special_brand"
+        case imagesUrl = "images_url"
+        case cBrand = "c_brand"
+        case isSpecialBrand = "is_special_brand"
         case isProductSet = "is_productSet"
     }
     let productId: Int

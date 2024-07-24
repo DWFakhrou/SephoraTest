@@ -14,7 +14,7 @@ final class ProductListViewModel {
             if productList.isEmpty {
                 
             } else {
-                print(productList)
+                
             }
         }
     }
