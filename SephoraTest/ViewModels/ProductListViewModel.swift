@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class ProductListViewModel {
     private var productService: ProductService
@@ -33,6 +34,17 @@ final class ProductListViewModel {
         }
         return productList
     }
+    
+    func getImage(url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
+            Task {
+                do {
+                    let image = try await productService.perform(from: url)
+                    completion(.success(image))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }
     
     
 }

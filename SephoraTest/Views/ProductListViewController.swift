@@ -45,6 +45,8 @@ class ProductListViewController: UIViewController {
         ])
     }
     
+    
+    
 }
 
 extension ProductListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -56,17 +58,28 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductListCell.identifer, for: indexPath) as? ProductListCell else {
             return UITableViewCell()
         }
-        print("\(self.products[indexPath.row].productName)")
-        cell.configure(
-            name: self.products[indexPath.row].productName,
-            price: self.products[indexPath.row].price,
-            description: self.products[indexPath.row].description
-        )
+        print("\(self.products[indexPath.row].imagesUrl.small)")
+        let product = products[indexPath.row]
+        cell.configure(name: product.productName, price: product.price, description: product.description, image: UIImage()) // Placeholder image
+        
+        if let imageUrl = URL(string: product.imagesUrl.small) {
+            viewModel.getImage(url: imageUrl) { result in
+                switch result {
+                case .success(let image):
+                    DispatchQueue.main.async {
+                        cell.configure(name: product.productName, price: product.price, description: product.description, image: image)
+                    }
+                case .failure(let error):
+                    print("Failed to fetch image: \(error)")
+                }
+            }
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 300
     }
     
     

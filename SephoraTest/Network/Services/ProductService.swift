@@ -26,11 +26,11 @@ struct ProductService {
         return decodedResponse
     }
     
-//    func perform(from url: URL) async throws -> UIImage {
-//        let data = try await api.makeRequest(from: url)
-//        guard let image = UIImage(data: data) else { throw RequestErrorType.DecodingError }
-//        return image
-//    }
+    func perform(from url: URL) async throws -> UIImage {
+        let data = try await api.makeRequest(from: url)
+        guard let image = UIImage(data: data) else { throw RequestErrorType.DecodingError }
+        return image
+    }
 }
 
 
